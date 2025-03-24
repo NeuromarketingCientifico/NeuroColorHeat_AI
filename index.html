@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroColorHeat_AI ver. 1.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>NeuroColorHeat_AI ver. 1.0</h1>
+        <img src="images/logo.png" alt="Logo NeuroColorHeat_AI" width="300">
+    </header>
+
+    <main>
+        <h2>Mapa de calor y puntos de interés</h2>
+        <form>
+            <label for="ruta">Introduce la ruta:</label>
+            <input type="text" id="ruta" name="ruta" placeholder="Ej: /imagenes/img1.png">
+            <button type="submit">Generar Mapa</button>
+        </form>
+
+        <div id="resultados">
+            <h3>Mapa de calor:</h3>
+            <img src="images/heatmap.png" alt="Mapa de calor" width="500">
+
+            <h3>Colores detectados:</h3>
+            <div id="colores">
+                <div style="background: #FF5733;">#FF5733</div>
+                <div style="background: #3498DB;">#3498DB</div>
+                <div style="background: #28B463;">#28B463</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 NeuroColorHeat_AI - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
