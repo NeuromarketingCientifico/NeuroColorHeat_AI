@@ -38,5 +38,11 @@
     <footer>
         <p>© 2025 NeuroColorHeat_AI - Todos los derechos reservados</p>
     </footer>
+    <script>
+        // Verificar si el usuario está logueado, si no, redirigir al login
+        if (!sessionStorage.getItem("loggedIn")) {
+            window.location.href = "login.html";  // Redirige al login si no está logueado
+        }
+    </script>
 </body>
 </html>
