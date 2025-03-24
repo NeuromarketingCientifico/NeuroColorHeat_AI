@@ -15,23 +15,28 @@
     <main>
         <section class="intro">
             <h2>Mapa de calor y puntos de interés</h2>
-            <form>
-                <label for="ruta">Introduce la ruta:</label>
-                <input type="text" id="ruta" name="ruta" placeholder="Ej: /imagenes/img1.png">
+            <form method="POST" action="/index">
+                <label for="ruta">Introduce la ruta de la imagen:</label>
+                <input type="text" id="ruta" name="ruta" placeholder="Ej: /imagenes/img1.png" required>
                 <button type="submit">Generar Mapa</button>
-            </form>
+            </form>    
         </section>
 
-        <section id="resultados">
-            <h3>Mapa de calor:</h3>
-            <img src="images/heatmap.png" alt="Mapa de calor" width="500">
 
-            <h3>Colores detectados:</h3>
-            <div id="colores">
-                <div style="background: #9ba547 ;">#9ba547</div>
-                <div style="background: #e0d1be ;">#e0d1be </div>
-                <div style="background: #748130 ;">#748130</div>
+        <section id="resultados">
+            {% if image_url %}
+            <div id="resultados">
+                <h3>Mapa de calor:</h3>
+                <img src="{{ image_url }}" alt="Mapa de calor" width="500">
+    
+                <h3>Colores detectados:</h3>
+                <div id="colores">
+                    <div style="background: #FF5733;">#FF5733</div>
+                    <div style="background: #3498DB;">#3498DB</div>
+                    <div style="background: #28B463;">#28B463</div>
+                </div>
             </div>
+            {% endif %}
         </section>
     </main>
 
