@@ -4,3 +4,4 @@ venv/
 # Ignorar archivos de Python bytecode
 __pycache__/
 *.pyc
+firebase-image-processing/
